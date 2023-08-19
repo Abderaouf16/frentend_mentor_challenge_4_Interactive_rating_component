@@ -1,0 +1,113 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-orange: hsl(25, 97%, 53%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-blue: hsl(213, 19%, 18%);
+  --color-light-gray: hsl(217, 12%, 63%);
+  --color-Very-Dark-Blue: hsl(216, 12%, 8%);
+  --color-Medium-Grey: hsl(216, 12%, 54%);
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --ff-overpass: "Overpass", sans-serif;
+  --fs-main: 15px;
+}
+body {
+  background: black;
+  font-family: var(--ff-overpass);
+  color: var(--color-white);
+}
+.container {
+  background-color: var(--color-Very-Dark-Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  background-image: radial-gradient(
+    at top,
+    var(--color-blue),
+    var(--color-Very-Dark-Blue)
+  );
+  height: 30em;
+  width: 28em;
+  padding: 2em;
+  border-radius: 20px;
+}
+
+.star_icon {
+  margin-bottom: 0.5em;
+}
+.star_icon img {
+  padding: 1em;
+  border-radius: 50%;
+  background-color: var(--color-blue);
+}
+.card_title {
+  margin-top: 2em;
+}
+.card_text {
+  color: var(--color-Medium-Grey);
+  margin: 2em 0;
+  line-height: 1.6;
+}
+
+/*Submit*/
+
+
+.rating_groupe {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+.rating-container {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: var(--color-blue);
+  padding: 1.8em;
+}
+.rating-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+input[type="radio"] {
+  display: none;
+}
+
+.card__btn {
+  width: 100%;
+  font-size: 15px;
+  padding: 1em 2em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background-color: var(--color-orange);
+  border: none;
+  border-radius: 2em;
+  font-weight: var(--fw-bold);
+}
+
+/*active state*/
+
+.rating-container:hover {
+  background-color: var(--color-orange);
+  cursor: pointer;
+}
+input[type="radio"]:checked + label {
+  background-color: var(--color-Medium-Grey);
+}
+.card__btn:hover {
+  cursor: pointer;
+  background-color: var(--color-white);
+  color: var(--color-orange);
+}
