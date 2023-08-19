@@ -41,9 +41,7 @@ body {
   padding: 2em;
   border-radius: 20px;
 }
-.submit-page {
-  display: none;
-}
+
 .star_icon {
   margin-bottom: 0.5em;
 }
@@ -98,12 +96,11 @@ input[type="radio"] {
   font-weight: var(--fw-bold);
 }
 
-
 /*success page*/
-
 
 .hidden {
   text-align: center;
+  display: none;
 }
 .success-img {
   display: block;
@@ -124,8 +121,6 @@ input[type="radio"] {
   margin: 0.8em;
 }
 
-
-
 /*active state*/
 
 .rating-container:hover {
@@ -143,5 +138,3 @@ input[type="radio"] {
 input[type="radio"]:checked + label {
   background-color: var(--color-Medium-Grey);
 }
-
-
