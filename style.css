@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
 *,
 ::before,
 ::after {
@@ -5,7 +6,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 :root {
   --color-orange: hsl(25, 97%, 53%);
   --color-white: hsl(0, 0%, 100%);
@@ -41,7 +41,9 @@ body {
   padding: 2em;
   border-radius: 20px;
 }
-
+.submit-page {
+  display: none;
+}
 .star_icon {
   margin-bottom: 0.5em;
 }
@@ -60,7 +62,6 @@ body {
 }
 
 /*Submit*/
-
 
 .rating_groupe {
   display: flex;
@@ -97,17 +98,50 @@ input[type="radio"] {
   font-weight: var(--fw-bold);
 }
 
+
+/*success page*/
+
+
+.hidden {
+  text-align: center;
+}
+.success-img {
+  display: block;
+  margin: auto;
+  padding: 1.5em;
+}
+.success-msg {
+  display: inline-block;
+  color: var(--color-orange);
+  padding: 0.5em 1.2em;
+  border-radius: 2em;
+  margin: 2em 0;
+  background-color: var(--color-blue);
+}
+.success-body {
+  color: var(--color-Medium-Grey);
+  line-height: 1.6;
+  margin: 0.8em;
+}
+
+
+
 /*active state*/
 
 .rating-container:hover {
   background-color: var(--color-orange);
   cursor: pointer;
 }
-input[type="radio"]:checked + label {
-  background-color: var(--color-Medium-Grey);
-}
+
 .card__btn:hover {
   cursor: pointer;
   background-color: var(--color-white);
   color: var(--color-orange);
 }
+
+/*SELECTED*/
+input[type="radio"]:checked + label {
+  background-color: var(--color-Medium-Grey);
+}
+
+
